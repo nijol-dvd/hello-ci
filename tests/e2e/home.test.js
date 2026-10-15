@@ -34,9 +34,8 @@ describe("Home Page E2E Test", () => {
   });
 
   test("loads home page and checks header", async () => {
-    // Inside Jenkins, container name 'jenkins' hosts the app on port 3000
     await driver.get("http://jenkins:3000");
     const headerText = await driver.findElement(By.css("h1")).getText();
-    expect(headerText).toBe("Welcome to CI/CD");
+    expect(headerText).toBe("Hello DevOps");
   });
 });
